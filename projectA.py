@@ -8,7 +8,7 @@ from pathlib import Path
 TOTAL_SIZE = 5000   # in MB (5 GB)
 SIZE_OF_FILES = 10  # in MB (10 MB)
 
-auth = tweepy.OAuthHandler('Nfm9pX9AieZ9CqOHX0xHZvFQq', 'gBiU0jsQv7JiGeEDOaIJLzgLSgzs1ZGSq4hez0AUqIjV8exK3z')
+auth = tweepy.OAuthHandler(os.environ['API_KEY'], os.environ['API_SECRET'])
 #
 # try:
 #     redirect_url = auth.get_authorization_url()
@@ -27,7 +27,7 @@ auth = tweepy.OAuthHandler('Nfm9pX9AieZ9CqOHX0xHZvFQq', 'gBiU0jsQv7JiGeEDOaIJLzg
 # print(auth.access_token_secret)
 #
 # api = tweepy.API(auth)
-auth.set_access_token('1120921341832548352-d5sMmcH4oTQHT8uXYdFCmECWvk2uAG', 'XnUbaEA1zvUI0VjjQKHbpr9jKFMCssnxOzpfz3kkcv6JK')
+auth.set_access_token(os.environ['ACCESS_KEY'], os.environ['ACCESS_SECRET'])
 api = tweepy.API(auth)
 
 
